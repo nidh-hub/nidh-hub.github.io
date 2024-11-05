@@ -1,0 +1,110 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Light grey for a subtle background */
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #e0a1c1, #f1b0d2); /* Soft pink gradient */
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+header h1 {
+    animation: fadeIn 1s ease-in;
+}
+
+header p {
+    font-size: 1.2rem;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffe4e1; /* Lighter pinkish white on hover */
+}
+
+/* Section Styles */
+.section-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5rem;
+    color: #333; /* Dark grey for text */
+    animation: slideIn 1s ease-out;
+}
+
+.job, .education, .project {
+    background: #ffffff; /* White background for cards */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job:hover, .education:hover, .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+}
+
+.list-group-item {
+    border: none;
+    background: #f8f9fa; /* Light grey for list items */
+    transition: background 0.3s;
+}
+
+.list-group-item:hover {
+    background: #eaeaea; /* Slightly darker grey on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #e0a1c1; /* Same soft pink as header */
+    color: #fff;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+}
