@@ -4,19 +4,19 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f8f4f0; /* Warm light beige */
-    color: #3a2e27; /* Dark warm brown for general text */
+    background-color: #fef9f5; /* Light peachy-beige background */
+    color: #4b3832; /* Deep, warm brown for general text */
 }
 
 h1, h2, h3 {
     font-family: 'Inter', sans-serif;
-    color: #3e3b3b; /* Dark warm gray */
+    color: #4a403a; /* Dark, muted brown-gray */
 }
 
 /* Header Styles */
 header {
-    background: linear-gradient(to right, #fff9f4, #f4e1d2); /* Warm, subtle gradient */
-    color: #3e3b3b;
+    background: linear-gradient(to right, #fff5f1, #fde3d9); /* Light peach gradient */
+    color: #4a403a;
     padding: 30px;
     text-align: center;
 }
@@ -24,24 +24,24 @@ header {
 header h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #3a2e27;
+    color: #4b3832;
     margin: 0;
     animation: fadeIn 1s ease-in;
 }
 
 header p {
     font-size: 1rem;
-    color: #7b6553; /* Softer, muted brown-gray */
+    color: #7d6659; /* Softer, muted brown */
     animation: fadeIn 1.5s ease-in;
 }
 
 .nav-link {
-    color: #3a2e27;
+    color: #4b3832;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #c86f55; /* Soft muted terracotta for hover */
+    color: #c95d63; /* Warm, muted red for hover */
 }
 
 /* Section Titles */
@@ -49,7 +49,7 @@ header p {
     text-align: center;
     margin: 30px 0;
     font-size: 2rem;
-    color: #3e3b3b;
+    color: #4a403a;
     animation: slideIn 1s ease-out;
 }
 
@@ -70,17 +70,17 @@ header p {
 
 .list-group-item {
     border: none;
-    background: #f7f0eb; /* Slightly lighter beige */
+    background: #f9eae0; /* Light peach background */
     transition: background 0.3s;
 }
 
 .list-group-item:hover {
-    background: #f0e3db;
+    background: #f2d7cc;
 }
 
 /* Footer */
 footer {
-    background-color: #3e3b3b;
+    background-color: #4a403a;
     color: #ffffff;
     text-align: center;
     padding: 20px;
@@ -97,11 +97,11 @@ footer {
 .contact-icon {
     font-size: 1.8rem;
     transition: color 0.3s ease;
-    color: #7b6553;
+    color: #7d6659;
 }
 
 .contact-icon:hover {
-    color: #c86f55; /* Muted terracotta */
+    color: #c95d63; /* Muted red */
 }
 
 /* Sidebar */
@@ -112,7 +112,7 @@ footer {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #3e3b3b;
+    background-color: #4a403a;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -122,13 +122,13 @@ footer {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 20px;
-    color: #e3d6d2; /* Soft beige for contrast */
+    color: #fde3d9; /* Soft peach for contrast */
     display: block;
     transition: 0.3s;
 }
 
 .sidebar a:hover {
-    color: #f0a5a5; /* Muted rose-pink for hover */
+    color: #e7a7a7; /* Soft pink */
 }
 
 .sidebar .closebtn {
@@ -141,14 +141,14 @@ footer {
 .openbtn {
     font-size: 18px;
     cursor: pointer;
-    background-color: #3e3b3b;
+    background-color: #4a403a;
     color: white;
     padding: 10px 15px;
     border: none;
 }
 
 .openbtn:hover {
-    background-color: #5d5757; /* Slightly lighter gray-brown */
+    background-color: #6d5e5a; /* Slightly lighter warm brown-gray */
 }
 
 #main {
@@ -177,7 +177,7 @@ footer {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
-    color: #3a2e27;
+    color: #4b3832;
 }
 
 .skill-item:hover {
@@ -186,12 +186,12 @@ footer {
 }
 
 /* Skill Icon Colors */
-.skill-icon.html { color: #e57342; }
-.skill-icon.css { color: #6e83a7; }
-.skill-icon.js { color: #d3a34d; }
-.skill-icon.python { color: #5d99c6; }
-.skill-icon.sql { color: #a15d34; }
-.skill-icon.tableau { color: #9dcb97; }
+.skill-icon.html { color: #d2766d; } /* Muted red-orange */
+.skill-icon.css { color: #b19e7b; } /* Warm gold */
+.skill-icon.js { color: #cba35f; } /* Muted yellow */
+.skill-icon.python { color: #87929e; } /* Soft blue-gray */
+.skill-icon.sql { color: #a97b64; } /* Earthy brown */
+.skill-icon.tableau { color: #a4c1a4; } /* Sage green */
 
 .skill-icon p {
     font-size: 0.9rem;
