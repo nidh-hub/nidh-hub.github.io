@@ -4,126 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nidhi Chakravarthy's Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Sidebar styles */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: width 0.5s;
+            padding-top: 60px;
+            color: white;
+            z-index: 1;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 36px;
+            color: white;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2; /* Ensure it stays above the sidebar */
+        }
+
+        /* Main content shifts to the right when sidebar opens */
+        .main-content {
+            transition: margin-left 0.5s;
+            padding: 20px;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #555;
+            color: white;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-info text-white text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Nidhi Chakravarthy</h1>
-            <p class="lead">Data Engineer | Software Development Enthusiast | Problem Solver | Innovator</p>
-            <nav>
-                <ul class="nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link text-white" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <button class="openbtn" onclick="openNav()">☰ </button>
+        <h1 class="display-4">Nidhi Chakravarthy</h1>
+        <p class="lead">Data Engineer | Software Development Enthusiast | Problem Solver | Innovator</p>
     </header>
 
-    <section id="experience" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="job">
-                <h3>Data Analyst at Holley Holland Group, London, UK</h3>
-                <p>October 2022 - Present</p>
-                <ul>
-                    <li>Analyzing data lineage issues in a custodian bank data using <strong>Solidatus</strong>.</li>
-                    <li>Utilizing <strong>Fraxses</strong> for data analysis and visualization.</li>
+    <!-- Sidebar navigation -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#experience" onclick="closeNav()">Experience</a>
+        <a href="#skills" onclick="closeNav()">Skills</a>
+        <a href="#projects" onclick="closeNav()">Projects</a>
+        <a href="#education" onclick="closeNav()">Education</a>
+        <a href="#contact" onclick="closeNav()">Contact</a>
+    </div>
+
+    <!-- Main content sections -->
+    <div id="mainContent" class="main-content">
+        <section id="experience" class="py-5">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="job">
+                    <h3>Data Analyst at Holley Holland Group, London, UK</h3>
+                    <p>October 2022 - Present</p>
+                    <ul>
+                        <li>Analyzing data lineage issues in a custodian bank data using <strong>Solidatus</strong>.</li>
+                        <li>Utilizing <strong>Fraxses</strong> for data analysis and visualization.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>Machine Learning Researcher at Indian Space Research Organization (ISRO)</h3>
+                    <p>January 2018 - February 2018</p>
+                    <ul>
+                        <li>Processed large datasets (1.5GB) using <strong>Apache Spark</strong>.</li>
+                        <li>Extracted key features using <strong>OpenCV</strong> and used <strong>Naive Bayes</strong> for gender classification with 96% accuracy.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>iOS Application Development Intern at Monkfox, India</h3>
+                    <p>June 2017 - August 2017</p>
+                    <ul>
+                        <li>Developed an iOS app using <strong>Swift</strong> and <strong>XCode</strong> with user authentication, order management, and checkout functionalities.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Programming Languages: Python, R, Java, C, C++, Swift</li>
+                    <li class="list-group-item">Machine Learning Tools: OpenCV, NumPy, Pandas</li>
+                    <li class="list-group-item">Big Data/Database: Hadoop, Apache Spark, MySQL</li>
+                    <li class="list-group-item">Software Tools: Git, Linux/Unix, MATLAB</li>
+                    <li class="list-group-item">Operating Systems: Linux, Windows, macOS</li>
+                    <li class="list-group-item">Methodologies: Agile, Scrum, Data Analysis</li>
                 </ul>
             </div>
-            <div class="job">
-                <h3>Machine Learning Researcher at Indian Space Research Organization (ISRO)</h3>
-                <p>January 2018 - February 2018</p>
-                <ul>
-                    <li>Processed large datasets (1.5GB) using <strong>Apache Spark</strong>.</li>
-                    <li>Extracted key features using <strong>OpenCV</strong> and used <strong>Naive Bayes</strong> for gender classification with 96% accuracy.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>iOS Application Development Intern at Monkfox, India</h3>
-                <p>June 2017 - August 2017</p>
-                <ul>
-                    <li>Developed an iOS app using <strong>Swift</strong> and <strong>XCode</strong> with user authentication, order management, and checkout functionalities.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <ul class="list-group">
-                <li class="list-group-item">Programming Languages: Python, R, Java, C, C++, Swift</li>
-                <li class="list-group-item">Machine Learning Tools: OpenCV, NumPy, Pandas</li>
-                <li class="list-group-item">Big Data/Database: Hadoop, Apache Spark, MySQL</li>
-                <li class="list-group-item">Software Tools: Git, Linux/Unix, MATLAB</li>
-                <li class="list-group-item">Operating Systems: Linux, Windows, macOS</li>
-                <li class="list-group-item">Methodologies: Agile, Scrum, Data Analysis</li>
-            </ul>
-        </div>
-    </section>
+        <section id="education" class="py-5">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education">
+                    <h3>University of Hertfordshire</h3>
+                    <p>Master's in Advanced Computer Science</p>
+                    <p>Relevant Courses: Foundations of Data Science, Neural Networks and Machine Learning, Computational Algorithms and Paradigms.</p>
+                </div>
+                <div class="education">
+                    <h3>Alva’s Institute of Engineering & Technology</h3>
+                    <p>Bachelor's in Computer Science Engineering</p>
+                    <p>Relevant Courses: Data Structures, DBMS, Linear Algebra & Calculus, Computer Networks, Operating Systems, Software Engineering.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="education" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education">
-                <h3>University of Hertfordshire</h3>
-                <p>Master's in Advanced Computer Science</p>
-                <p>Relevant Courses: Foundations of Data Science, Neural Networks and Machine Learning, Computational Algorithms and Paradigms.</p>
+        <section id="projects" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="project">
+                    <h3>Art Gallery Web Application</h3>
+                    <p>Built a database system to manage artwork and artist details using HTML, CSS, PHP, and Triggers for data manipulation.</p>
+                </div>
+                <div class="project">
+                    <h3>Mushroom Disease Detection Android App</h3>
+                    <p>Developed an Android app that uses Naive Bayes and OpenCV for mushroom disease detection based on images captured by cellular devices.</p>
+                </div>
+                <div class="project">
+                    <h3>Deep Feature Extraction with Autoencoders and SVM-Based Semi-Supervised Image Classification</h3>
+                    <p>Designed a semi-supervised image classification model leveraging autoencoders for feature extraction and support vector machines (SVM) for classification.</p>
+                </div>
+                <div class="project">
+                    <h3>FloraGAN: A Comprehensive Approach to Synthetic Flower Image Generation and Naive Bayes Classification</h3>
+                    <p>Created a GAN-based model to generate synthetic flower images, followed by classification using Naive Bayes for species identification.</p>
+                </div>
             </div>
-            <div class="education">
-                <h3>Alva’s Institute of Engineering & Technology</h3>
-                <p>Bachelor's in Computer Science Engineering</p>
-                <p>Relevant Courses: Data Structures, DBMS, Linear Algebra & Calculus, Computer Networks, Operating Systems, Software Engineering.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="project">
-                <h3>Art Gallery Web Application</h3>
-                <p>Built a database system to manage artwork and artist details using HTML, CSS, PHP, and Triggers for data manipulation.</p>
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-icons">
+                    <a href="mailto:chakravarthynidhi@gmail.com" target="_blank" class="contact-icon" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nidhi-chakravarthy/" target="_blank" class="contact-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="tel:+447000000000" target="_blank" class="contact-icon" title="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://github.com/nidhi-chakravarthy" target="_blank" class="contact-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
-            <div class="project">
-                <h3>Mushroom Disease Detection Android App</h3>
-                <p>Developed an Android app that uses Naive Bayes and OpenCV for mushroom disease detection based on images captured by cellular devices.</p>
-            </div>
-            <div class="project">
-                <h3>Deep Feature Extraction with Autoencoders and SVM-Based Semi-Supervised Image Classification</h3>
-                <p>Designed a semi-supervised image classification model leveraging autoencoders for feature extraction and support vector machines (SVM) for classification.</p>
-            </div>
-            <div class="project">
-                <h3>FloraGAN: A Comprehensive Approach to Synthetic Flower Image Generation and Naive Bayes Classification</h3>
-                <p>Created a GAN-based model to generate synthetic flower images, followed by classification using Naive Bayes for species identification.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <p>Email: <a href="mailto:nidhi@gmail.com">chakravarthynidhi@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/nidhi-chakravarthy/">LinkedIn Profile</a></p>
-            <p>Phone: +44 7000000000</p>
-        </div>
-    </section>
+        </section>
+        
+    </div>
 
     <footer class="bg-primary text-white text-center py-3">
         <p>&copy; 2024 Nidhi Chakravarthy. All Rights Reserved.</p>
     </footer>
 
-    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
 </body>
 </html>
