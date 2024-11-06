@@ -1,81 +1,112 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f9f9f9; /* Light grey for a subtle background */
+    background-color: #f6f5f2; /* Light, warm off-white for background */
+    color: #333333; /* Dark gray for general text */
 }
 
 h1, h2, h3 {
     font-family: 'Georgia', serif;
+    color: #4b2e2e; /* Deep warm brown */
 }
 
 /* Header Styles */
 header {
-    background: linear-gradient(to right, #e0a1c1, #f1b0d2); /* Soft pink gradient */
+    background: linear-gradient(to right,#77512c58, #a56c2a74); /* Autumn sunset gradient */
     position: relative;
     overflow: hidden;
-    color: #fff;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
     animation: fadeIn 1s ease-in;
 }
 
 header p {
     font-size: 1.2rem;
+    color: #fefefe; 
     animation: fadeIn 1.5s ease-in;
 }
 
 .nav-link {
+    color: #fefefe;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #ffe4e1; /* Lighter pinkish white on hover */
+    color: #d3d9e2;
 }
 
-/* Section Styles */
+/* Section Titles */
 .section-title {
     text-align: center;
     margin: 30px 0;
-    font-size: 2.5rem;
-    color: #333; /* Dark grey for text */
+    font-size: 2.2rem;
+    color: #181320;
     animation: slideIn 1s ease-out;
 }
 
+/* Job, Education, Project Cards */
 .job, .education, .project {
-    background: #ffffff; /* White background for cards */
+    background: #ffffff;
     border-radius: 10px;
     padding: 20px;
     margin: 15px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.job::before, .education::before, .project::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(147, 101, 255, 0.15);
+    transition: top 0.4s ease;
+    border-radius: 10px;
+}
+
+.job:hover::before, .education:hover::before, .project:hover::before {
+    top: 0;
 }
 
 .job:hover, .education:hover, .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .list-group-item {
     border: none;
-    background: #f8f9fa; /* Light grey for list items */
+    background: #f0eae7; 
     transition: background 0.3s;
 }
 
 .list-group-item:hover {
-    background: #eaeaea; /* Slightly darker grey on hover */
+    background: #e6ddd8;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
-    background-color: #e0a1c1; /* Same soft pink as header */
-    color: #fff;
+    background-color: #3e2e4b;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
 }
 
-/* Contact Section */
+/* Contact Icons */
 .contact-icons {
     display: flex;
     justify-content: center;
@@ -85,12 +116,27 @@ footer {
 
 .contact-icon {
     font-size: 2rem;
-    color: #e0a1c1; /* Soft pink to match the theme */
     transition: color 0.3s ease;
 }
 
+.email-icon {
+    color: #792c2c; 
+}
+
+.linkedin-icon {
+    color: #0077b5; 
+}
+
+.phone-icon {
+    color: #2e8332;
+}
+
+.github-icon {
+    color: #333333; 
+}
+
 .contact-icon:hover {
-    color: #f1b0d2; /* Lighter pink on hover */
+    color: #25327d;
 }
 
 /* Sidebar */
@@ -101,7 +147,7 @@ footer {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #2e2e4b;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -111,13 +157,13 @@ footer {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #cdbcff; 
     display: block;
     transition: 0.3s;
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
+    color: #ffd191; 
 }
 
 .sidebar .closebtn {
@@ -125,20 +171,19 @@ footer {
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
 }
 
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background-color: #342e4b;
     color: white;
     padding: 10px 15px;
     border: none;
 }
 
 .openbtn:hover {
-    background-color: #444;
+    background-color: #3e2c23;
 }
 
 #main {
@@ -146,7 +191,65 @@ footer {
     padding: 16px;
 }
 
-/* Animation Keyframes */
+/* Skills Section */
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    animation: fadeInSkills 1s ease-out;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    color: #4b2e2e;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon.html {
+    color: #e34c26;
+}
+
+.skill-icon.css {
+    color: #2965f1;
+}
+
+.skill-icon.js {
+    color: #f0db4f;
+}
+
+.skill-icon.python {
+    color: #3572a5;
+}
+
+.skill-icon.sql {
+    color: #ff5722;
+}
+
+.skill-icon.tableau {
+    color: #1f77b4;
+}
+
+.skill-icon p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -167,6 +270,17 @@ footer {
     }
 }
 
+@keyframes fadeInSkills {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .section-title {
@@ -181,43 +295,3 @@ footer {
         font-size: 18px;
     }
 }
-/* Skills Section */
-.skills-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding-top: 20px;
-}
-
-.skill-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-    color: #333;
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.skill-icon {
-    font-size: 2.5rem;
-    color: #e0a1c1; /* Soft pink to match the theme */
-    margin-bottom: 10px;
-}
-
-.skill-item p {
-    font-size: 1rem;
-    margin: 0;
-    color: #333; /* Darker grey for text */
-}
-

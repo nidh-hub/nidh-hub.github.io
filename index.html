@@ -6,6 +6,21 @@
     <title>Nidhi Chakravarthy's Portfolio</title>
     <link rel="stylesheet" href="Styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Scroll Indicator Bar */
+        #scrollIndicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background-color: #ff4500; /* Adjust color to match your theme */
+            z-index: 100; /* Ensure it stays on top */
+        }
+    </style>
+    
+   
     <style>
         /* Sidebar styles */
         .sidebar {
@@ -80,6 +95,8 @@
     </style>
 </head>
 <body>
+    <div id="scrollIndicator"></div>
+
     <header>
         <button class="openbtn" onclick="openNav()">☰ </button>
         <h1 class="display-4">NIDHI CHAKRAVARTHY</h1>
@@ -234,23 +251,21 @@
             </div>
         </section>
 
-        <section id="contact" class="py-5">
-            <div class="container">
-                <h2 class="section-title">Contact</h2>
-                <div class="contact-icons">
-                    <a href="mailto:chakravarthynidhi@gmail.com" target="_blank" class="contact-icon" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/nidhi-chakravarthy/" target="_blank" class="contact-icon" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="tel:+447000000000" target="_blank" class="contact-icon" title="Phone">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                    <a href="https://github.com/nidhi-chakravarthy" target="_blank" class="contact-icon" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-icons">
+                <a href="mailto:chakravarthynidhi@gmail.com" class="contact-icon email-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/nidhi-chakravarthy/" class="contact-icon linkedin-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="tel:+447000000000" class="contact-icon phone-icon" title="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://github.com/nidhi-chakravarthy" class="contact-icon github-icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
         </section>
         
@@ -272,5 +287,16 @@
             document.getElementById("mainContent").style.marginLeft = "0";
         }
     </script>
+    <script>
+        window.onscroll = function() { updateScrollIndicator() };
+    
+        function updateScrollIndicator() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollIndicator").style.width = scrolled + "%";
+        }
+    </script>
+    
 </body>
 </html>
