@@ -1,9 +1,4 @@
 
-
-
-/* Existing styles remain the same */
-
-/* Updated styles for the hero section */
 .hero-section {
     height: 100vh;
     display: flex;
@@ -15,11 +10,11 @@
 
 .hero-content {
     display: grid;
-    grid-template-columns: 3fr 2fr; /* Adjust ratio for about:image */
+    grid-template-columns: 3fr 2fr; 
     gap: 30px;
     max-width: 1200px;
     width: 100%;
-    position: relative; /* For positioning the divider */
+    position: relative; /* positioning the divider */
 }
 
 .hero-about {
@@ -48,7 +43,7 @@
 }
 
 .hero-image {
-    width: 80%; /* Make image smaller */
+    width: 80%; 
     height: auto;
     object-fit: cover;
     border-radius: 20px;
@@ -61,12 +56,11 @@
     position: absolute;
     top: 10%;
     bottom: 10%;
-    left: calc(60% - 1px); /* Adjust based on grid ratio */
+    left: calc(60% - 1px); 
     width: 2px;
-    background-color: #ffd4f1; /* Light pink divider */
+    background-color: #ffd4f1; 
 }
 
-/* Adjust the main content to start after the hero section */
 .main-content {
     padding-top: 50px;
 }
@@ -107,12 +101,12 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif; /* Clean, modern font */
+    font-family: 'Montserrat', sans-serif; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
     background-color: #f9f7f6; /* Light, warm off-white background */
-    color: #3d3d3d; /* Soft gray for text */
+    color: #3d3d3d; 
 }
 
 /* Header Styles */
@@ -148,7 +142,7 @@ header p {
 }
 
 .nav-link:hover {
-    color: #ff8a93; /* Gentle pink for hover effect */
+    color: #ff8a93;
 }
 
 /* Section Titles */
@@ -156,7 +150,7 @@ header p {
     text-align: center;
     margin: 30px 0;
     font-size: 2.3rem;
-    color: #9b7e96; /* Muted, earthy mauve */
+    color: #9b7e96; 
     animation: slideIn 1s ease-out;
 }
 
@@ -176,10 +170,9 @@ header p {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* List Group Items */
 .list-group-item {
     border: none;
-    background: #ffebef; /* Soft pink background */
+    background: #ffebef; 
     transition: background 0.3s ease;
     border-radius: 8px;
     padding: 10px 15px;
