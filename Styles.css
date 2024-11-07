@@ -1,4 +1,111 @@
-/* General Styles */
+
+
+
+/* Existing styles remain the same */
+
+/* Updated styles for the hero section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffdfba, #ffc1d6);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* Adjust ratio for about:image */
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    position: relative; /* For positioning the divider */
+}
+
+.hero-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px; /* Space for divider */
+}
+
+.hero-about h1 {
+    font-size: 2.5rem;
+    color: #5c4d7d;
+    margin-bottom: 20px;
+}
+
+.hero-about p {
+    font-size: 1.1rem;
+    color: #3d3d3d;
+    line-height: 1.6;
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 80%; /* Make image smaller */
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Divider styles */
+.hero-content::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: calc(60% - 1px); /* Adjust based on grid ratio */
+    width: 2px;
+    background-color: #ffd4f1; /* Light pink divider */
+}
+
+/* Adjust the main content to start after the hero section */
+.main-content {
+    padding-top: 50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-about {
+        padding-right: 0;
+    }
+
+    .hero-image-container {
+        order: -1; /* Move image to top on mobile */
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .hero-content::after {
+        display: none; /* Remove divider on mobile */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+}
+
 body {
     font-family: 'Montserrat', sans-serif; /* Clean, modern font */
     margin: 0;
