@@ -1,84 +1,91 @@
 /* General Styles */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Clean, modern font */
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f4f7fc; /* Light neutral background for a clean look */
-    color: #2e3a59; /* Dark slate gray for text to keep it readable and professional */
+    background-color: #f9f7f6; /* Light, warm off-white background */
+    color: #3d3d3d; /* Soft gray for text */
 }
 
 /* Header Styles */
 header {
-    background: linear-gradient(to right, #8961be, #ac62c3); /* Gradient of tech blue to soft blue */
-    color: #ffffff; /* White text to contrast with the vibrant gradient */
-    padding: 50px;
+    background: linear-gradient(135deg, #ffdfba, #ffc1d6); /* Soft pastel peach-to-pink gradient */
+    color: #3d3d3d;
+    padding: 60px 20px;
     text-align: center;
+    position: relative;
+    border-bottom: 2px solid #ffd4f1;
+    border-radius: 0px 0px 20px 20px;
 }
 
 header h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #ddc2c2;
+    color: #5c4d7d; /* Soft, muted purple */
     margin: 0;
     animation: fadeIn 1s ease-in;
 }
 
 header p {
     font-size: 1.2rem;
-    color: #d2d8e3; /* Soft light gray for a professional look */
+    color: #a06d92; /* Light purple */
     animation: fadeIn 1.5s ease-in;
 }
 
 /* Navigation Link Styles */
 .nav-link {
-    color: #2e3a59; /* Dark blue-gray for the links */
+    color: #5c4d7d;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #f79c42; /* Bright orange for hover effect, adding energy */
+    color: #ff8a93; /* Gentle pink for hover effect */
 }
 
 /* Section Titles */
 .section-title {
     text-align: center;
     margin: 30px 0;
-    font-size: 2.5rem;
-    color: #2e3a59;
+    font-size: 2.3rem;
+    color: #9b7e96; /* Muted, earthy mauve */
     animation: slideIn 1s ease-out;
 }
 
 /* Job, Education, Project Cards */
 .job, .education, .project {
     background: #ffffff;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 20px;
     margin: 15px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #ffd4f1;
 }
 
 .job:hover, .education:hover, .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* List Group Items */
 .list-group-item {
     border: none;
-    background: #e6f2f7; /* Soft pastel blue for list items */
+    background: #ffebef; /* Soft pink background */
     transition: background 0.3s ease;
+    border-radius: 8px;
+    padding: 10px 15px;
 }
 
 .list-group-item:hover {
-    background: #cbe1ec; /* Slightly darker blue for hover effect */
+    background: #ffd4f1; /* Light pastel pink */
 }
 
 /* Footer */
 footer {
-    background-color: #b15eff; /* Deep blue background for footer */
-    color: #ffffff; /* White text for contrast */
+    background-color: #ffe3ee; /* Light pastel pink for footer */
+    color: #5c4d7d;
     text-align: center;
     padding: 20px;
 }
@@ -94,11 +101,11 @@ footer {
 .contact-icon {
     font-size: 1.8rem;
     transition: color 0.3s ease;
-    color: #845eff; /* Deep blue for contact icons */
+    color: #a06d92;
 }
 
 .contact-icon:hover {
-    color: #f79c42; /* Bright orange on hover for interaction */
+    color: #ffb3b8;
 }
 
 /* Sidebar */
@@ -109,7 +116,7 @@ footer {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #5e7dff; /* Deep blue sidebar */
+    background-color: #ffd4f1;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -119,13 +126,13 @@ footer {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 20px;
-    color: #ffffff; /* White text for sidebar links */
+    color: #5c4d7d;
     display: block;
     transition: 0.3s;
 }
 
 .sidebar a:hover {
-    color: #f79c42; /* Bright orange for hover effect */
+    color: #ff8a93;
 }
 
 .sidebar .closebtn {
@@ -138,14 +145,15 @@ footer {
 .openbtn {
     font-size: 18px;
     cursor: pointer;
-    background-color: #5e7dff; /* Tech blue for open button */
+    background-color: #ffb3b8;
     color: white;
     padding: 10px 15px;
     border: none;
+    border-radius: 20px;
 }
 
 .openbtn:hover {
-    background-color: #4a66d7; /* Slightly darker blue */
+    background-color: #ff8a93;
 }
 
 #main {
@@ -167,31 +175,31 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90px;
-    padding: 12px;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    width: 100px;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #fff9fa; /* Very light pastel pink */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
-    color: #2e3a59; /* Dark gray-blue for skill icon text */
+    color: #7a5269;
 }
 
 .skill-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Skill Icon Colors */
-.skill-icon.html { color: #f79c42; } /* Warm orange for HTML */
-.skill-icon.css { color: #7ac7e7; } /* Soft teal for CSS */
-.skill-icon.js { color: #f1c659; } /* Yellow for JavaScript */
-.skill-icon.python { color: #5f6368; } /* Muted gray for Python */
-.skill-icon.sql { color: #7d8b8e; } /* Slate gray for SQL */
-.skill-icon.tableau { color: #6ac4b4; } /* Soft green for Tableau */
+.skill-icon.html { color: #f2b7a1; }
+.skill-icon.css { color: #a4d8c2; }
+.skill-icon.js { color: #f9d786; }
+.skill-icon.python { color: #d6a6ff; }
+.skill-icon.sql { color: #f9a7b3; }
+.skill-icon.tableau { color: #91c7e3; }
 
 .skill-icon p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 0;
 }
 
@@ -211,73 +219,10 @@ footer {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* Sidebar Slide-In Animation */
-@keyframes slideInFromLeft {
-    0% {
-        width: 0;
-        transform: translateX(-100%);
-    }
-    100% {
-        width: 250px;
-        transform: translateX(0);
-    }
-}
-
-.sidebar.slide-in {
-    animation: slideInFromLeft 0.3s ease-in-out;
-}
-
-/* Scroll Indicator Animation */
-@keyframes scrollIndicator {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-#scrollIndicator {
-    transition: width 0.25s ease;
-}
-
-/* Bouncing Effect for Skill Items */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
-.skill-item.bounce {
-    animation: bounce 1s ease infinite;
-}
-
-/* Fade In from Bottom for Section Titles */
-@keyframes fadeInFromBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.section-title.fadeInFromBottom {
-    animation: fadeInFromBottom 0.6s ease-out;
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .section-title { font-size: 1.8rem; }
     .nav-link { font-size: 0.9rem; }
     .sidebar a { font-size: 18px; }
-    header h1 { font-size: 2rem; }
+    header h1 { font-size: 2.5rem; }
 }
