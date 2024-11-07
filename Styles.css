@@ -10,7 +10,7 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(to right, #5e7dff, #70a0e7); /* Gradient of tech blue to soft blue */
+    background: linear-gradient(to right, #8961be, #ac62c3); /* Gradient of tech blue to soft blue */
     color: #ffffff; /* White text to contrast with the vibrant gradient */
     padding: 50px;
     text-align: center;
@@ -19,7 +19,7 @@ header {
 header h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #ddc2c2;
     margin: 0;
     animation: fadeIn 1s ease-in;
 }
@@ -77,7 +77,7 @@ header p {
 
 /* Footer */
 footer {
-    background-color: #5e7dff; /* Deep blue background for footer */
+    background-color: #b15eff; /* Deep blue background for footer */
     color: #ffffff; /* White text for contrast */
     text-align: center;
     padding: 20px;
@@ -94,7 +94,7 @@ footer {
 .contact-icon {
     font-size: 1.8rem;
     transition: color 0.3s ease;
-    color: #5e7dff; /* Deep blue for contact icons */
+    color: #845eff; /* Deep blue for contact icons */
 }
 
 .contact-icon:hover {
