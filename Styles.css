@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/attahost');
 
 .hero-section {
     height: 100vh;
@@ -14,14 +15,14 @@
     gap: 30px;
     max-width: 1200px;
     width: 100%;
-    position: relative; /* positioning the divider */
+    position: relative; 
 }
 
 .hero-about {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 30px; /* Space for divider */
+    padding-right: 30px; 
 }
 
 .hero-about h1 {
@@ -101,14 +102,13 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Lumanosimo', cursive; /* Handwritten font style */
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f9f7f6; /* Light, warm off-white background */
-    color: #3d3d3d; 
+    background-color: #f9f7f6;
+    color: #3d3d3d;
 }
-
 /* Header Styles */
 header {
     background: linear-gradient(135deg, #ffdfba, #ffc1d6); /* Soft pastel peach-to-pink gradient */
